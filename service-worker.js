@@ -1,8 +1,15 @@
 
 self.addEventListener('install', function(e) {
-  console.log('Service Worker Installed');
+  e.waitUntil(
+    caches.open('agrinexus-cache').then(function(cache) {
+      return cache.addAll(['./AgriNexusWorld_GlobalPWA_Final.html']);
+    })
+  );
 });
-
 self.addEventListener('fetch', function(e) {
-  e.respondWith(fetch(e.request));
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
 });

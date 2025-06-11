@@ -1,10 +1,1 @@
-
-{
-  "name": "AgriNexus World",
-  "short_name": "AgriNexus",
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2563eb",
-  "icons": []
-}
+{'name': 'AgriNexus World – Global Smart Farming AI', 'short_name': 'AgriNexus', 'start_url': './AgriNexusWorld_GlobalPWA_Final.html', 'display': 'standalone', 'background_color': '#ffffff', 'theme_color': '#0072c6', 'icons': [{'src': 'https://agrinexus.world/logo192.png', 'sizes': '192x192', 'type': 'image/png'}, {'src': 'https://agrinexus.world/logo512.png', 'sizes': '512x512', 'type': 'image/png'}]}

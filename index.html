@@ -340,12 +340,70 @@ footer {
   font-weight: bold;
   cursor: pointer;
 }
-</style>
+
+
+    /* 🌐 AgriNexus World - Premium Visual Redesign Upgrade */
+    body {
+        background: linear-gradient(to right, #edf4fb, #fcfcff);
+        font-family: 'Noto Sans KR', 'Segoe UI', sans-serif;
+        color: #222;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(6px);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+    }
+
+    .button {
+        font-size: 17px;
+        padding: 14px 26px;
+        border-radius: 12px;
+        background: linear-gradient(to right, #2c7be5, #5273f0);
+        font-weight: bold;
+        color: white;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .button:hover {
+        background: linear-gradient(to right, #5273f0, #2c7be5);
+        transform: translateY(-2px);
+    }
+
+    .modal-content {
+        font-size: 15.5px;
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 0 28px rgba(0,0,0,0.15);
+        border: 1px solid #ddd;
+    }
+
+    footer {
+        font-size: 14px;
+        color: #666;
+        background: rgba(255,255,255,0.9);
+        padding: 30px 20px;
+    }
+    </style>
 <script>
     function openModal(id) { document.getElementById(id).style.display = 'block'; }
     function closeModal(id) { document.getElementById(id).style.display = 'none'; }
   </script>
-</head>
+<link href="manifest.json" rel="manifest"/><script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('service-worker.js');
+  });
+}
+</script></head>
 <body>
 <div class="card" style="background-color: #f9f9f9; padding: 30px; border-radius: 12px; margin-bottom: 40px;">
 <h1>AgriNexus World – 인류를 위한 유일무이한 농업 초지능 자동화의 이야기</h1>
@@ -394,10 +452,6 @@ AI는 최적 설비, 작물, 투자 전략, 파트너 연결, 마케팅 플로�
 <p>AgriNexus World는 기술이 아니라 <b>생존 전략</b>입니다.<br/>
 당신의 공간이, 지구 최고의 농장으로 바뀌는 여정에 지금 합류하세요.</p>
 </div>
-
-
-
-
 <div class="hot-systems">🔥 실시간 인기 시스템: G.U.A.R.D.I.A.N. · L.O.G.I.C. · E.V.E.R.L.A.S.T.</div><style>
   html { scroll-behavior: smooth; }
   body { margin: 0; }
@@ -473,7 +527,13 @@ AgriNexus World는 전문가, 초보자, 농민, 기관, 기업, 정부 누구�
 <button class="button" onclick="openModal('modal003')">AgriNexus L.O.G.I.C. 🚚 글로벌 물류 자동 추적·최적화 시스템</button>
 </div><div class="card">
 <button class="button" onclick="openModal('modal005')">AgriNexus G.U.A.R.D.I.A.N. ⚖️ 글로벌 지식재산·계약·법률 자동 보호 시스템</button>
-</div><div class="card">
+</div>
+<div class="card">
+<button class="button" onclick="openModal('modal_palanc')">
+    AgriNexus P.A.L.A.N.C.E. 🧠 예측 기반 농업 통제 AI 시스템
+  </button>
+</div>
+<div class="card">
 <button class="button" onclick="openModal('modal008')">AgriGlobalFlow™ 📡 실시간 글로벌 스마트팜 확산·확장 시스템</button>
 </div><div class="card">
 <button class="button" onclick="openModal('modal009')">AgriSalesLoop™ 💰 반복형 자동 수익 창출 시스템 (광고, 추천, 유입 등)</button>
@@ -661,7 +721,45 @@ AgriNexus World는 전문가, 초보자, 농민, 기관, 기업, 정부 누구�
 <button class="button" onclick="openModal('modal100')">AgriNexus U.N.B.R.E.A.K.A.B.L.E. 🛡️ 시스템 전면 무결성 유지 + 분산 복제 + 해킹 불가 구조</button>
 </div><div class="card">
 <button class="button" onclick="openModal('modal101')">AgriNexus E.V.E.R.L.A.S.T. ♾️ 플랫폼이 멈추지 않고 진화·적응·확장되는 궁극의 자율 생존 시스템</button>
-</div></section><section id="howto">
+</div>
+<div class="modal" id="modal_palanc">
+<div class="modal-content">
+<span class="close" onclick="closeModal('modal_palanc')">×</span>
+<h2>AgriNexus P.A.L.A.N.C.E. 🧠 예측 기반 농업 통제 AI 시스템</h2>
+<h3>[국문 설명]</h3>
+<pre>
+AgriNexus P.A.L.A.N.C.E. (Predictive Agricultural Logistics And Nexus-based Command Engine)는
+전 세계 농업, 물류, 정책, 위험 데이터를 통합하여 실시간 전략을 수립하고 지휘하는
+AI 기반 통합 명령 시스템입니다.
+
+🌎 위성·기후·시장 데이터 기반 예측
+⚠️ 위기 발생 시 자동 경고 + 대책 수립
+📊 AI 대시보드로 전략 시뮬레이션 자동 제시
+📡 모든 AgriNexus 시스템과 연결된 통제 센터 역할 수행
+
+이 시스템은 'AI 기반 농업 전략의 두뇌'로 작동하며,
+재배, 수출, 투자, 기후, 물류까지 모든 흐름을 자동으로 감지하고 판단합니다.
+    </pre>
+<hr/>
+<h3>[English Description]</h3>
+<pre>
+AgriNexus P.A.L.A.N.C.E. (Predictive Agricultural Logistics And Nexus-based Command Engine)
+is the central AI intelligence module that orchestrates smart farming operations
+based on real-time predictions, logistics analysis, and command recommendations.
+
+🌍 Satellite + climate + market data integration
+⚠️ Risk detection and instant mitigation strategy
+📊 AI dashboard with scenario simulation and alerts
+📡 Control center for all connected AgriNexus systems
+
+It’s the intelligent command core of AgriNexus World,
+enabling proactive agriculture, autonomous logistics, and investor-grade insight.
+    </pre>
+</div>
+<button class="tts-button" onclick="alert('🗣 음성 설명 재생됩니다.')">🔊 설명 듣기</button>
+<div class="ai-comment">🤖 이 시스템은 전 세계 농업 전략의 중심에 위치합니다.</div>
+</div>
+</section><section id="howto">
 <h1>AgriNexus World – 인류를 위한 유일무이한 농업 초지능 자동화의 이야기</h1>
 <h2>전 세계 누구도 따라올 수 없는 스마트팜 초지능 플랫폼 이야기</h2>
 <hr/>
@@ -780,8 +878,6 @@ window.addEventListener('load', () => {
 <option value="es">Español</option>
 </select>
 </div><div id="loading-screen">AgriNexus World를 불러오는 중...</div>
-
-
 <section id="features"><div class="modal" id="modal001">
 <div class="modal-content">
 <span class="close" onclick="closeModal('modal001')">×</span>
@@ -5849,16 +5945,28 @@ AgriNexus E.V.E.R.L.A.S.T. makes your platform timeless—
 </div>
 <button class="tts-button" onclick="alert('🗣 음성 설명 재생됩니다.')">🔊 설명 듣기</button><div class="ai-comment">🤖 이 시스템은 고위험 수출구간 대응 또는 국제 인증 관리 시에 특히 유용합니다.</div></div></section><section id="contact"></section>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="language-selector" style="position:fixed;top:10px;right:20px;z-index:1000;">
+<select onchange="switchLanguage(this.value)">
+<option value="ko">🇰🇷 한국어</option>
+<option value="en">🇺🇸 English</option>
+<option value="jp">🇯🇵 日本語</option>
+<option value="zh">🇨🇳 中文</option>
+</select>
+</div>
+<script>
+function switchLanguage(lang) {
+  document.querySelectorAll('.i18n-text').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let lang = navigator.language || navigator.userLanguage;
+  if (lang.startsWith('en')) switchLanguage('en');
+  else if (lang.startsWith('ja')) switchLanguage('jp');
+  else if (lang.startsWith('zh')) switchLanguage('zh');
+  else switchLanguage('ko');
+});
+</script>
 </body></html>
